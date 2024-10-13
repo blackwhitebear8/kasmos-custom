@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=/opt/notepadnext/squashfs-root/usr/bin/NotepadNext %f
+Comment=A cross-platform, reimplementation of Notepad++
+Type=Application
+Icon=/opt/notepadnext/squashfs-root/NotepadNext
+Name=Notepad Next
+StartupNotify=true
+Terminal=false
+Categories=Qt;TextEditor;Utility;
+MimeType=text/plain;
