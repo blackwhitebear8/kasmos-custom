@@ -30,8 +30,6 @@ RUN  wget --no-hsts https://www.termius.com/download/linux/Termius.deb \
     && apt install -y element-desktop \
     && sed -i 's|Exec=/opt/Element/element-desktop %U|Exec=/opt/Element/element-desktop --no-sandbox %U|' /usr/share/applications/element-desktop.desktop \
 
-    && apt install -y vlc \
-
     && mkdir -p /opt/notepadnext \
     && wget -O /opt/notepadnext/notepadnext.AppImage https://github.com/dail8859/NotepadNext/releases/download/v0.8/NotepadNext-v0.8-x86_64.AppImage \
     && chmod +x /opt/notepadnext/notepadnext.AppImage \
@@ -40,6 +38,8 @@ RUN  wget --no-hsts https://www.termius.com/download/linux/Termius.deb \
     && cd /home/kasm-default-profile \
 
     && apt remove -y zoom* \
+
+    && apt install -y vlc htop mtr net-tools neofetch \
 
     && apt update -y \
     && apt upgrade -y \
